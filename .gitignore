@@ -4,3 +4,6 @@ _source/
 .claude/
 smoke.html
 *.backup.html
+
+# Docs de conception (nomment le projet interne) — hors package diffusable
+docs/
