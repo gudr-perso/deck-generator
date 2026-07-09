@@ -41,3 +41,11 @@ Charger le theme.md fourni (ou proposer assets/themes/exemple-sobre.md). Valider
    - {{PREP_NOTES}} = `1:"", 2:"", … N:""` (N = nombre de diapos).
    - {{MILESTONES}} = si une diapo `agenda` horodatée existe, mapper chaque horaire au numéro de diapo de la section correspondante ; sinon `1:0, N:<durationTotalMin>`.
 7. Vérifier qu'il ne reste AUCUN marqueur `{{…}}` non substitué.
+
+## 6. Vérification navigateur (toujours)
+Servir le fichier en local et piloter le navigateur :
+- Aucun marqueur `{{…}}` résiduel ; aucune requête réseau (autonome).
+- Mode public : diapos lisibles, navigation OK, thème appliqué (couleurs/polices), aucune fuite présentateur.
+- Mode présentateur (#presenter + message state) : aperçus, notes (PREP_NOTES affichées, textarea éditable), timer (démarrer/pause/reset, écart) OK.
+- Contrastes acceptables (sinon rappeler l'avertissement du thème).
+Fournir une preuve (capture ou état) puis livrer le fichier.
