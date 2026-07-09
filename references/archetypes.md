@@ -124,3 +124,19 @@ Patron :
 </div></div>
 ```
 Champs : eyebrow (ex. `On échange`), titre (ex. `Des questions ? <em>Parlons-en.</em>`), sous_titre, tagline. Utilise la classe `s-cta` du moteur ; `qa` n'est qu'un rôle sémantique de clôture.
+
+## Heuristiques de détection (contenu → archétype proposé)
+| Signal dans le contenu | Archétype proposé |
+|---|---|
+| Toute première section (titre + accroche) | cover |
+| Liste dont les items commencent par `hh:mm` | agenda |
+| Titre court seul, ou « Partie N » / numéro | divider |
+| Une seule phrase forte, pas de puces | big-title |
+| Énumération à puces (3-6 items) | points |
+| Plusieurs nombres/pourcentages saillants | stats |
+| Image dominante sans texte long | image-full |
+| Liste de liens/ressources | list |
+| Section de conclusion / invitation à agir | cta |
+| Dernière section « questions / échanges » | qa |
+
+Règle : en cas d'ambiguïté, proposer `points` par défaut et laisser l'humain trancher au checkpoint.
