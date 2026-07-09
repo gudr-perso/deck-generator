@@ -21,3 +21,9 @@ Selon la source fournie :
 - **Word (.docx)** : extraction best-effort du texte structuré (titres/paragraphes/listes) et des images. Signaler ce qui n'a pas pu être extrait.
 
 Résultat : une structure de contenu (titres hiérarchiques + blocs + images) qui alimentera le plan. Tout élément non exploité est listé au checkpoint ★.
+
+## 2. Générer le plan.md
+À partir du contenu, produire un plan.md (voir references/plan-format.md). Pour chaque section : proposer un archétype via les heuristiques (references/archetypes.md) et remplir les champs.
+
+## 3. Checkpoint de revue ★ (obligatoire)
+Présenter le plan.md à l'utilisateur. Il peut : changer un archétype, corriger un texte, réordonner, ajouter/supprimer une diapo, réassigner une image. Ne PAS passer à l'assemblage sans validation explicite. Lister ici tout contenu source non exploité ou toute extraction partielle.
