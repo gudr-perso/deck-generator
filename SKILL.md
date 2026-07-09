@@ -13,3 +13,11 @@ Le moteur (assets/engine.template.html) est FIGÉ : recopié verbatim, on ne rem
 
 ## Workflow (détaillé plus bas)
 1. Entrée → contenu   2. plan.md   3. Checkpoint ★   4. Thème   5. Assemblage   6. Vérif navigateur
+
+## 1. Entrée → contenu
+Selon la source fournie :
+- **PDF** : lire le fichier avec l'outil de lecture de fichiers (lecture PDF native, aucun runtime). Extraire titres, paragraphes, listes, images.
+- **Notion** : si les outils MCP Notion sont disponibles, récupérer la page (notion-fetch). SINON : dégradation propre → message « Le connecteur Notion n'est pas disponible : connecte Notion, ou fournis un export PDF/Word. » et s'arrêter proprement.
+- **Word (.docx)** : extraction best-effort du texte structuré (titres/paragraphes/listes) et des images. Signaler ce qui n'a pas pu être extrait.
+
+Résultat : une structure de contenu (titres hiérarchiques + blocs + images) qui alimentera le plan. Tout élément non exploité est listé au checkpoint ★.
