@@ -6,8 +6,8 @@ Pivot révisable par l'humain (checkpoint ★). Markdown :
 # <Titre du deck>
 
 ## Diapo 1 — cover
-Titre : Formation RFE
-Sous-titre : Démat des factures
+Titre : Titre de la présentation
+Sous-titre : Accroche en une ligne
 
 ## Diapo 3 — agenda
 - 00:00 Introduction & objectifs

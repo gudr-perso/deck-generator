@@ -7,7 +7,7 @@
 <!-- Autonome : polices système uniquement, aucune ressource réseau. Les familles nommées dans le thème ne sont que des préférences en tête de pile. -->
 <style>
 :root{
-  /* ===== Charte réseau Cuma ===== */
+  /* ===== Charte (défauts du moteur, surchargés par le thème) ===== */
   --dark-deep:#04271b; --dark:#0a3d2b;              /* fonds sombres (vert profond) */
   --orange:#ff8200; --orange-bright:#ff9d3d;        /* Pantone 151 C */
   --green:#31b700; --green-light:#93c90e;           /* Pantone 2421 C / 2292 C */
@@ -554,7 +554,7 @@ if(MODE==='presenter'){
   const elDayTitle=document.getElementById('pv-day-title');
   const elNbtns=document.getElementById('pv-nbtns');
   const elStatus=document.getElementById('pv-day-status');
-  const LS_KEY='rfe_notes_jour';
+  const LS_KEY='deck_notes_jour';
   let dayNotes={}, fileHandle=null;
   try{ dayNotes=JSON.parse(localStorage.getItem(LS_KEY)||'{}')||{}; }catch(e){ dayNotes={}; }
 
@@ -630,7 +630,7 @@ if(MODE==='presenter'){
   const elDelta=document.getElementById('pv-delta');
   const elTimerToggle=document.getElementById('pv-timer-toggle');
   const elTimerReset=document.getElementById('pv-timer-reset');
-  const TIMER_KEY='rfe_timer';
+  const TIMER_KEY='deck_timer';
   let timer={running:false,startedAt:null,elapsedBefore:0};
   try{ const s=JSON.parse(localStorage.getItem(TIMER_KEY)||'null'); if(s&&typeof s==='object'){ timer={running:!!s.running,startedAt:s.startedAt||null,elapsedBefore:+s.elapsedBefore||0}; } }catch(e){}
 
