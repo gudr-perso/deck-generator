@@ -11,6 +11,9 @@ Skill de génération de diaporamas HTML autonomes avec vue présentateur privé
 ## Autonomie
 Fichier unique, aucune dépendance réseau, polices système. Vue présentateur non partagée dans la visio.
 
+## Guide détaillé
+Voir [docs/guide-utilisateur.md](docs/guide-utilisateur.md) : piloter un deck (navigation, vue présentateur, notes, timer), générer un deck avec Claude, créer un thème, dépannage.
+
 ## Personnalisation
 - Thème : voir references/theme-format.md.
 - Gabarits : voir references/archetypes.md.
