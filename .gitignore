@@ -6,4 +6,4 @@ smoke.html
 *.backup.html
 
 # Docs de conception (nomment le projet interne) — hors package diffusable
-docs/
+docs/superpowers/
