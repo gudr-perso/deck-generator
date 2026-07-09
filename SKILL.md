@@ -27,3 +27,17 @@ Résultat : une structure de contenu (titres hiérarchiques + blocs + images) qu
 
 ## 3. Checkpoint de revue ★ (obligatoire)
 Présenter le plan.md à l'utilisateur. Il peut : changer un archétype, corriger un texte, réordonner, ajouter/supprimer une diapo, réassigner une image. Ne PAS passer à l'assemblage sans validation explicite. Lister ici tout contenu source non exploité ou toute extraction partielle.
+
+## 4. Thème
+Charger le theme.md fourni (ou proposer assets/themes/exemple-sobre.md). Valider (references/theme-format.md : hex, contraste heuristique, piles de polices). Construire la chaîne {{THEME_VARS}} = liste `--var:valeur;` selon le mapping rôle→variable.
+
+## 5. Assemblage (substitution — ne PAS régénérer le moteur)
+1. Copier assets/engine.template.html VERBATIM vers le fichier de sortie.
+2. Remplacer {{THEME_VARS}} par la chaîne de variables.
+3. Remplacer {{DECK_TITLE}} par le titre du plan.
+4. Remplacer {{SLIDES}} par la concaténation des diapos : pour chaque `## Diapo` du plan, rendre le patron d'archétype (archetypes.md) avec ses champs. La 1re diapo porte la classe `active`. Fond clair → `data-theme="light"` selon l'archétype.
+5. Images : intégrer chaque image en base64 (WebP si possible) directement dans le HTML (aucune ressource externe).
+6. Seeds :
+   - {{PREP_NOTES}} = `1:"", 2:"", … N:""` (N = nombre de diapos).
+   - {{MILESTONES}} = si une diapo `agenda` horodatée existe, mapper chaque horaire au numéro de diapo de la section correspondante ; sinon `1:0, N:<durationTotalMin>`.
+7. Vérifier qu'il ne reste AUCUN marqueur `{{…}}` non substitué.
