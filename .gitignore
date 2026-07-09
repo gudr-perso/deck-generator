@@ -1,9 +1,11 @@
 # Deck modèle (contenu réel) — build-time only, JAMAIS diffusé
 _source/
+
 # Config locale (serveur de preview, etc.)
 .claude/
 smoke.html
 *.backup.html
+*.bak
 
 # Docs de conception (nomment le projet interne) — hors package diffusable
 docs/superpowers/
