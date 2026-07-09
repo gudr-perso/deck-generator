@@ -47,3 +47,11 @@ pas exposées comme rôles en v1 : elles conservent la valeur par défaut du mot
 - Polices : toujours une pile finissant par une famille générique (serif/sans-serif/monospace). Aucune police n'est chargée par le réseau ; une police nommée n'est qu'une préférence en tête de pile.
 - Options.durationTotalMin : borne haute par défaut des jalons du timer si aucun agenda détecté.
 - Options.defaultTheme : sombre|clair.
+
+## Validation (heuristique, faite par le LLM avant assemblage)
+1. Couleurs : chaque valeur est un hex valide (#rgb ou #rrggbb). Sinon → erreur bloquante, demander correction.
+2. Contraste : estimer le ratio de luminance entre l'encre et chaque fond, et entre texte clair et fond sombre.
+   - Calcul indicatif : luminance relative WCAG ; viser un ratio ≥ 4.5:1 pour le texte courant.
+   - Si probablement < 4.5:1 → AVERTIR l'utilisateur au checkpoint (ne pas bloquer, il peut assumer).
+3. Polices : chaque pile finit par serif|sans-serif|monospace. Sinon → ajouter le générique manquant et le signaler.
+4. Options : defaultTheme ∈ {sombre, clair} ; durationTotalMin entier > 0.
