@@ -1,0 +1,15 @@
+---
+name: html-deck-presenter
+description: Génère un diaporama HTML autonome piloté par un pop-up présentateur (aperçus + notes par diapo + timer avance/retard) à partir d'une source Notion/Word/PDF et d'un thème markdown. À utiliser quand l'utilisateur veut fabriquer/mettre à jour un support de présentation HTML projetable en visio, avec vue présentateur privée.
+---
+
+# Générer un diaporama HTML présentateur
+
+## Quand
+L'utilisateur fournit un contenu (Notion/Word/PDF) et veut un deck HTML autonome + vue présentateur. Sortie = TOUJOURS un HTML unique (jamais un PPTX).
+
+## Principe
+Le moteur (assets/engine.template.html) est FIGÉ : recopié verbatim, on ne remplit que les zones de substitution (voir references/engine-contract.md). Le LLM juge le contenu et l'archétype, et assemble par substitution.
+
+## Workflow (détaillé plus bas)
+1. Entrée → contenu   2. plan.md   3. Checkpoint ★   4. Thème   5. Assemblage   6. Vérif navigateur
