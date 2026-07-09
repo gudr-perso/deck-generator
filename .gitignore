@@ -1,3 +1,6 @@
+# Deck modèle (contenu réel) — build-time only, JAMAIS diffusé
 _source/
+# Config locale (serveur de preview, etc.)
+.claude/
 smoke.html
 *.backup.html
